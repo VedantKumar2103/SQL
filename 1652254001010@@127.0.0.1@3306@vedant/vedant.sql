@@ -72,3 +72,7 @@ select* from  test;
 
 
 SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
+
+SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
+
+SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
