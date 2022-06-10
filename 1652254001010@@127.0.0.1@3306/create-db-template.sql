@@ -1,27 +1,2 @@
-CREATE DATABASE college;
-use college;
-create table student(USN varchar(2), SName varchar(30), Address varchar(50), Phone varchar(11), Gender varchar(2));
-insert into student values(1, 'Vedant', 'Rohini', 9877126339, 'M');
-insert into student values(2, 'Vanshika', 'Uttar Pradesh', 903295833, 'F');
-insert into student values(3, 'Himesh;', 'Shastri Nagar', 9455839204, 'M');
-insert into student values(4, 'Hardeep', 'Rohini', 9465768665, 'M');
-insert into student values(5, 'Maneesh', 'Nangloi', 9354656456,'‘M');
-insert into student values(6, 'Shehba', 'Old Delhi', 9354656544, 'M');
-insert into student values(7, 'Satvik', 'Pitampura', 7011354564, 'M');
-insert into student values(8, 'Akib', 'Old Delhi', 9127535458, 'M');
-insert into student values(9, 'Ankush', 'Shastri Nagar', 9897166369, 'M');
-insert into student values(10,'Rahul', 'Shahdhra', 9667575666,'M');
-SELECT*from student;
-create table semsec(SSID varchar(20), Sem varchar(2), Credits varchar(2));
-insert into semsec values(00917002021,1,'A');
-insert into semsec values(5217002021,1,'A');
-insert into semsec values(04317002021,1,'A');
-insert into semsec values(01817002021,1,'A');
-insert into semsec values(03817002021,1,'A');
-insert into semsec values(01917002021,1,'A');
-insert into semsec values(00817002021,1,'A');
-insert into semsec values(03217002021,1,'A');
-insert into semsec values(02617002021,1,'A');
-insert into semsec values(00317002021,1,'A');
-drop table semsec;
-
+CREATE DATABASE [name]
+    DEFAULT CHARACTER SET = 'utf8mb4';
