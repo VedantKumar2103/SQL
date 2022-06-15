@@ -76,3 +76,5 @@ SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
 SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
 
 SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
+
+SELECT usn,subcode,ssid,tes1,test2,fmarks FROM marks;
