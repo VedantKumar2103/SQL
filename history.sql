@@ -569,3 +569,240 @@ insert into marks VALUES('BCA08',103,110008,40,40,80);
 insert into marks VALUES('BCA09',101,110009,40,45,85);
 /* 2022-06-15 12:37:46 [46 ms] */ 
 insert into marks VALUES('BCA10',102,110010,40,50,90);
+/* 2022-06-16 09:32:44 [72 ms] */ 
+CREATE TABLE student(usn varchar(10), sname char(20),address varchar(25), phoneno int, gender char(6));
+/* 2022-06-16 09:33:56 [56 ms] */ 
+insert into student values ('BCA','karthik','delhi',123456789,'M');
+/* 2022-06-16 09:34:19 [62 ms] */ 
+drop table student;
+/* 2022-06-16 09:34:22 [39 ms] */ 
+CREATE TABLE student(usn varchar(10), sname char(20),address varchar(25), phoneno int, gender char(6));
+/* 2022-06-16 09:35:01 [49 ms] */ 
+insert into student values ('BCA01','karthik','delhi',123456789,'M');
+/* 2022-06-16 09:36:36 [10 ms] */ 
+insert into student values ('BCA02','sahil','UP',123456790,'M');
+/* 2022-06-16 09:37:08 [45 ms] */ 
+insert into student values ('BCA03','alam','delhi',123456791,'M');
+/* 2022-06-16 09:38:16 [47 ms] */ 
+insert into student values ('BCA04','vipul','delhi',123456792,'M');
+/* 2022-06-16 09:39:11 [9 ms] */ 
+insert into student values ('BCA05','mahiva','UP',123456793,'F');
+/* 2022-06-16 09:39:43 [46 ms] */ 
+insert into student values ('BCA06','gagan','UP',123456794,'M');
+/* 2022-06-16 09:40:50 [45 ms] */ 
+insert into student values ('BCA07','paesha','delhi',123456795,'F');
+/* 2022-06-16 09:41:28 [48 ms] */ 
+insert into student values ('BCA08','ayush','UP',123456796,'M');
+/* 2022-06-16 09:41:59 [8 ms] */ 
+insert into student values ('BCA09','sarthak','delhi',123456797,'M');
+/* 2022-06-16 09:43:42 [10 ms] */ 
+insert into student values ('BCA10','vanshika','UP',123456798,'M');
+/* 2022-06-16 21:32:57 [5 ms] */ 
+select*from student;
+/* 2022-06-16 21:33:07 [18 ms] */ 
+update  student set sname='vedant' where phoneno= 123456792;
+/* 2022-06-16 21:38:10 [3 ms] */ 
+select*from student;
+/* 2022-06-16 21:52:59 [20 ms] */ 
+update  student set address='delhi' where sname= 'gagan';
+/* 2022-06-16 21:53:26 [3 ms] */ 
+select*from student;
+/* 2022-06-16 21:55:53 [7 ms] */ 
+DELETE FROM student  where  phoneno=123456791;
+/* 2022-06-16 21:56:10 [4 ms] */ 
+select*from student;
+/* 2022-06-16 21:57:51 [39 ms] */ 
+drop table student;
+/* 2022-06-16 21:58:52 [9 ms] */ 
+delete from semsec;
+/* 2022-06-16 21:59:25 [3 ms] */ 
+select*from semsec;
+/* 2022-06-16 22:05:00 [5 ms] */ 
+select*from student;
+/* 2022-06-16 22:06:50 [17 ms] */ 
+select*from marks;
+/* 2022-06-16 22:15:49 [3 ms] */ 
+SELECT * from marks where tes1=36;
+/* 2022-06-16 22:20:24 [4 ms] */ 
+SELECT SUBSTRING(USN, 1, 5) AS ExtractString FROM marks;
+/* 2022-06-16 22:26:01 [14 ms] */ 
+SELECT  * from student order by usn;
+/* 2022-06-16 22:27:38 [2 ms] */ 
+SELECT  * from student order by usn desc;
+/* 2022-06-16 22:28:51 [3 ms] */ 
+SELECT  * from student order by usn ,phoneno;
+/* 2022-06-16 22:32:32 [40 ms] */ 
+CREATE TABLE Persons (ID int NOT NULL, LastName varchar(255) NOT NULL, FirstName varchar(255),Age int, PRIMARY KEY (ID));
+/* 2022-06-16 22:33:26 [23 ms] */ 
+desc persons;
+/* 2022-06-16 22:34:58 [19 ms] */ 
+drop table persons;
+/* 2022-06-16 22:35:05 [28 ms] */ 
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    UNIQUE (ID)
+);
+/* 2022-06-16 22:35:36 [7 ms] */ 
+desc persons;
+/* 2022-06-16 23:17:09 [96 ms] */ 
+drop table persons;
+/* 2022-06-16 23:17:32 [94 ms] */ 
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CHECK (Age>=18)
+);
+/* 2022-06-16 23:17:39 [47 ms] */ 
+desc persons;
+/* 2022-06-16 23:19:01 [68 ms] */ 
+drop table persons;
+/* 2022-06-16 23:19:24 [48 ms] */ 
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255) DEFAULT 'Sandnes'
+);
+/* 2022-06-16 23:19:31 [48 ms] */ 
+desc persons;
+/* 2022-06-16 23:21:13 [64 ms] */ 
+drop table persons;
+/* 2022-06-16 23:21:32 [76 ms] */ 
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255) DEFAULT 'Sandnes'
+);
+/* 2022-06-16 23:22:38 [80 ms] */ 
+drop table persons;
+/* 2022-06-16 23:22:41 [37 ms] */ 
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    UNIQUE (ID)
+);
+/* 2022-06-16 23:22:46 [50 ms] */ 
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    ID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (ID) REFERENCES Persons(ID)
+);
+/* 2022-06-16 23:23:27 [9 ms] */ 
+desc orders;
+/* 2022-06-16 23:24:50 [43 ms] */ 
+select*from marks;
+/* 2022-06-16 23:28:49 [11 ms] */ 
+SELECT COUNT(SNAME) FROM STUDENT;
+/* 2022-06-16 23:29:40 [43 ms] */ 
+Select sum(tes1) from marks where subcode=101;
+/* 2022-06-16 23:31:13 [5 ms] */ 
+SELECT avg(tes1) from marks;
+/* 2022-06-16 23:33:12 [43 ms] */ 
+Select min(test2) from marks;
+/* 2022-06-16 23:34:12 [5 ms] */ 
+Select max(test2) from marks;
+/* 2022-06-16 23:34:45 [5 ms] */ 
+SELECT sname as studentname
+FROM student;
+/* 2022-06-16 23:36:55 [44 ms] */ 
+select * from marks where tes1=(select count(tes1)*4 from marks);
+/* 2022-06-16 23:37:54 [44 ms] */ 
+select * from student inner join marks on student.usn=marks.usn;
+/* 2022-06-17 10:29:55 [12 ms] */ 
+select*from marks;
+/* 2022-06-17 10:30:57 [43 ms] */ 
+SELECT marks.tes1,marks.test2,subject.title FROM marks LEFT JOIN subject ON marks.SUBCODE;
+/* 2022-06-17 10:34:41 [17 ms] */ 
+SELECT marks.tes1,marks.test2,subject.title FROM marks RIGHT JOIN subject ON marks.SUBCODE;
+/* 2022-06-17 10:40:38 [14 ms] */ 
+select * from student cross join subject;
+/* 2022-06-17 11:13:32 [48 ms] */ 
+CREATE DATABASE company;
+/* 2022-06-17 11:30:09 [129 ms] */ 
+create table person(driver_id varchar(10),name varchar(10),address varchar(10),primary key(driver_id));
+/* 2022-06-17 11:31:53 [75 ms] */ 
+DROP Table person;
+/* 2022-06-17 11:31:58 [70 ms] */ 
+create table person(driver_id varchar(10),name varchar(10),address varchar(10),primary key(driver_id));
+/* 2022-06-17 11:32:00 [41 ms] */ 
+create table car(regno varchar(10),model varchar(10),year int,primary key(regno));
+/* 2022-06-17 11:32:02 [80 ms] */ 
+create table accident(report_number int,accd_date date,location varchar(10),primary key(report_number));
+/* 2022-06-17 11:32:03 [85 ms] */ 
+create table owns(driver_id varchar(10),regno varchar(10),primary key(driver_id,regno),foreign key(driver_id) references person(driver_id),foreign key(regno) references car(regno));
+/* 2022-06-17 11:32:08 [91 ms] */ 
+create table participated(driver_id varchar(10),regno varchar(10),report_number int,damage_amount int,primary key(driver_id,regno,report_number),foreign key(driver_id) references person(driver_id),foreign key(regno) references car(regno),foreign key(report_number) references accident(report_number));
+/* 2022-06-17 11:34:08 [51 ms] */ 
+insert into person values('D192','vedant','delhi');
+/* 2022-06-17 11:34:09 [9 ms] */ 
+insert into person values('D193','kamar','burari');
+/* 2022-06-17 11:34:10 [44 ms] */ 
+insert into person values('D194','shruti','rohini');
+/* 2022-06-17 11:34:12 [44 ms] */ 
+insert into person values('D195','Sahil','sultan');
+/* 2022-06-17 11:34:13 [44 ms] */ 
+insert into person values('D196','karan','china');
+/* 2022-06-17 11:43:47 [42 ms] */ 
+select*from person;
+/* 2022-06-17 11:46:31 [51 ms] */ 
+insert into  car values('DL8182','Ertiga',2022);
+/* 2022-06-17 11:46:32 [8 ms] */ 
+insert into  car values('DL9258','swift',2022);
+/* 2022-06-17 11:46:34 [44 ms] */ 
+insert into  car values('DL2457','bMWx5',2017);
+/* 2022-06-17 11:46:35 [43 ms] */ 
+insert into  car values('DL1257','mercdes',2012);
+/* 2022-06-17 11:46:36 [43 ms] */ 
+insert into  car values('DL1221','Rollce',2012);
+/* 2022-06-17 11:47:34 [5 ms] */ 
+select*from car;
+/* 2022-06-17 11:48:53 [48 ms] */ 
+insert into accident values(1234,'2022-07-12','Delhi');
+/* 2022-06-17 11:48:54 [11 ms] */ 
+insert into accident values(1235,'2022-06-11','up');
+/* 2022-06-17 11:48:56 [43 ms] */ 
+insert into accident values(1236,'2022-01-11','banglore');
+/* 2022-06-17 11:48:57 [44 ms] */ 
+insert into accident values(1237,'2022-01-11','banglore');
+/* 2022-06-17 11:49:01 [43 ms] */ 
+insert into accident values(1238,'2021-03-11','chennai');
+/* 2022-06-17 11:49:13 [5 ms] */ 
+select*from accident;
+/* 2022-06-17 12:03:11 [60 ms] */ 
+create table owns(driver_id varchar(10),regno varchar(10),primary key(driver_id,regno),foreign key(driver_id) references person(driver_id),foreign key(regno) references car(regno));
+/* 2022-06-17 19:57:37 [28 ms] */ 
+CREATE DATABASE company;
+/* 2022-06-17 19:58:18 [82 ms] */ 
+create table person(driver_id varchar(10) PRIMARY KEY, name varchar(40), address varchar(100));
+/* 2022-06-17 19:58:24 [77 ms] */ 
+create table car(regno varchar(10) PRIMARY KEY, model varchar(20),year int);
+/* 2022-06-17 19:58:25 [10 ms] */ 
+select *from car;
+/* 2022-06-17 19:58:26 [72 ms] */ 
+create table accident(report_number int PRIMARY KEY, acc_date int, location varchar(100));
+/* 2022-06-17 19:58:29 [35 ms] */ 
+create table owns(driver_id varchar(10) PRIMARY KEY, regno varchar(10));
+/* 2022-06-17 19:58:32 [80 ms] */ 
+create table participated(driver_id varchar(10), regno varchar(10), report_number int PRIMARY KEY, damage_amount int);
+/* 2022-06-17 20:01:09 [124 ms] */ 
+alter table person add FOREIGN KEY(driver_id) REFERENCES owns(driver_id);
+/* 2022-06-17 20:01:56 [51 ms] */ 
+select *from participated;
+/* 2022-06-17 20:02:11 [120 ms] */ 
+alter table person add FOREIGN KEY(driver_id) REFERENCES owns(driver_id);
+/* 2022-06-19 23:28:42 [11 ms] */ 
+select *from participated;
+/* 2022-06-19 23:28:46 [190 ms] */ 
+alter table person add FOREIGN KEY(driver_id) REFERENCES owns(driver_id);

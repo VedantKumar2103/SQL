@@ -42,5 +42,78 @@ insert into marks VALUES('BCA07',104,110007,40,45,85);
 insert into marks VALUES('BCA08',103,110008,40,40,80);
 insert into marks VALUES('BCA09',101,110009,40,45,85);
 insert into marks VALUES('BCA10',102,110010,40,50,90);
-update  student set sname='vipul' where address = 'delhi';
+drop table student;
+CREATE TABLE student(usn varchar(10), sname char(20),address varchar(25), phoneno int, gender char(6));
+insert into student values ('BCA01','karthik','delhi',123456789,'M');
+insert into student values ('BCA02','sahil','UP',123456790,'M');
+insert into student values ('BCA03','alam','delhi',123456791,'M');
+insert into student values ('BCA04','vipul','delhi',123456792,'M');
+insert into student values ('BCA05','mahiva','UP',123456793,'F');
+insert into student values ('BCA06','gagan','UP',123456794,'M');
+insert into student values ('BCA07','paesha','delhi',123456795,'F');
+insert into student values ('BCA08','ayush','UP',123456796,'M');
+insert into student values ('BCA09','sarthak','delhi',123456797,'M');
+insert into student values ('BCA10','vanshika','UP',123456798,'M');
+update  student set sname='vedant' where phoneno= 123456792;
+update  student set address='delhi' where sname= 'gagan';
+DELETE FROM student  where  phoneno=123456791;
+select*from marks;
+SELECT * from marks where tes1=36; 
+SELECT SUBSTRING(USN, 1, 5) AS ExtractString FROM marks;
+SELECT  * from student order by usn desc ;
+SELECT  * from student order by usn ,phoneno ;
+CREATE TABLE Persons (ID int NOT NULL, LastName varchar(255) NOT NULL, FirstName varchar(255),Age int, PRIMARY KEY (ID));
+desc persons;
+drop table persons;
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    UNIQUE (ID)
+);
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CHECK (Age>=18)
+);
+
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CHECK (Age>=18)
+);
+
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255) DEFAULT 'Sandnes'
+);
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    ID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (ID) REFERENCES Persons(ID)
+);
+select*from marks;
+SELECT COUNT(SNAME) FROM STUDENT;
+Select sum(tes1) from marks where subcode=101;
+SELECT avg(tes1) from marks;
+Select max(test2) from marks;
+SELECT sname as studentname
+FROM student;
+select * from marks where tes1=(select count(tes1)*4 from marks);
+select * from student inner join marks on student.usn=marks.usn;
+SELECT marks.tes1,marks.test2,subject.title FROM marks LEFT JOIN subject ON marks.SUBCODE;
+select*from marks;
+SELECT marks.tes1,marks.test2,subject.title FROM marks RIGHT JOIN subject ON marks.SUBCODE;
+select * from student cross join subject;
+
 

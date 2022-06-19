@@ -1,0 +1,14 @@
+create table person(driver_id varchar(10) PRIMARY KEY, name varchar(40), address varchar(100));
+select *from person;
+create table car(regno varchar(10) PRIMARY KEY, model varchar(20),year int);
+select *from car;
+create table accident(report_number int PRIMARY KEY, acc_date int, location varchar(100));
+select *from accident;
+create table owns(driver_id varchar(10) PRIMARY KEY, regno varchar(10));
+select *from owns;
+create table participated(driver_id varchar(10), regno varchar(10), report_number int PRIMARY KEY, damage_amount int);
+select *from participated;
+alter table person add FOREIGN KEY(driver_id) REFERENCES owns(driver_id);
+alter table car add FOREIGN KEY(regno) REFERENCES participated(regno);
+alter table participated add UNIQUE KEY(report_number);
+alter table participated add primary key(regno);

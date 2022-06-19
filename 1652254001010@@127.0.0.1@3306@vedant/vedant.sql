@@ -78,3 +78,9 @@ SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
 SELECT `NO`,name,age,department,dateofadmin,charges,gender FROM hospital;
 
 SELECT usn,subcode,ssid,tes1,test2,fmarks FROM marks;
+
+SELECT usn,sname,address,phoneno,gender FROM student;
+delete from semsec;
+select*from semsec;
+create view present as select FSName, SName from practice, demo where practice.SNo= demo.SNo;
+create view past as select FSName from practice where SNo>=0;
