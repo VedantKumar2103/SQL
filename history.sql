@@ -806,6 +806,7 @@ alter table person add FOREIGN KEY(driver_id) REFERENCES owns(driver_id);
 select *from participated;
 /* 2022-06-19 23:28:46 [190 ms] */ 
 alter table person add FOREIGN KEY(driver_id) REFERENCES owns(driver_id);
+<<<<<<< HEAD
 /* 2022-06-22 20:04:29 [27 ms] */ 
 create database library;
 /* 2022-06-22 20:04:50 [14 ms] */ 
@@ -955,3 +956,7 @@ delete from book_ where book_no=(select book_no from iss_rec_ where iss_date='20
 create view lib as select iss_no, iss_date, Stud_name, book_name from iss_rec_, student, book_ , membership where iss_rec_.Mem_no=membership.Mem_no AND student.Stud_no=membership.Stud_no AND book_.book_no=iss_rec_.book_no;
 /* 2022-06-22 20:30:00 [2 ms] */ 
 delete from book_ where book_no=(select book_no from iss_rec_ where iss_date='2022-06-22');
+=======
+
+
+>>>>>>> f7a91d9c2e407103cac6cd292b9489a537434ebd
