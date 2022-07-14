@@ -1,2 +1,1 @@
-CREATE DATABASE [name]
-    DEFAULT CHARACTER SET = 'utf8mb4';
+create database business;

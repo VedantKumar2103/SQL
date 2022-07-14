@@ -135,3 +135,41 @@ delete from book_ where book_no=(select book_no from iss_rec_ where iss_date='20
 create view lib as select iss_no, iss_date, Stud_name, book_name from iss_rec_, student, book_ , membership where iss_rec_.Mem_no=membership.Mem_no AND student.Stud_no=membership.Stud_no AND book_.book_no=iss_rec_.book_no;
 /* 2022-06-22 20:30:00 [2 ms] */ 
 delete from book_ where book_no=(select book_no from iss_rec_ where iss_date='2022-06-22');
+/* 2022-07-07 13:08:07 [60 ms] */ 
+create index test on book_(book_no,book_name);
+/* 2022-07-07 13:08:27 [58 ms] */ 
+show index from book_;
+/* 2022-07-07 13:10:33 [7 ms] */ 
+show index from book_ from library;
+/* 2022-07-07 13:12:54 [6 ms] */ 
+show keys from book_ from library;
+/* 2022-07-07 13:13:21 [7 ms] */ 
+show index from book_ from library where "book_name";
+/* 2022-07-07 13:13:25 [6 ms] */ 
+show keys from book_ from library;
+/* 2022-07-07 13:16:17 [41 ms] */ 
+select*from book_;
+/* 2022-07-07 13:19:36 [97 ms] */ 
+CREATE TABLE contacts(
+
+contact_id INT AUTO_INCREMENT,
+
+first_name VARCHAR(100) NOT NULL,
+
+last_name VARCHAR(100) NOT NULL,
+
+email VARCHAR(100),
+
+phone VARCHAR(20),
+
+PRIMARY KEY(contact_id),
+
+UNIQUE (email),
+
+INDEX phone (phone) INVISIBLE,
+
+INDEX name(first_name, last_name) comment 'By first name and/or last name'
+
+);
+/* 2022-07-07 13:22:41 [3 ms] */ 
+select*from contacts;
